@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CompetencePlus.VO
+namespace CompetencePlus.PackageFilieres
 {
     public class Filiere
     {
