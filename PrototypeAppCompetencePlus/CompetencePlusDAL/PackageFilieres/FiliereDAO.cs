@@ -19,7 +19,8 @@ namespace CompetencePlus.PackageFilieres
 
         public  void Update(Filiere f )
         {
-            string Requete = "Update Filieres set Code ='"+f.Code+"',Titre ='"+f.Titre+",Description="+f.Description+"' where id ="+f.Id;
+            string Requete = "Update Filieres set Code ='"+f.Code+"',Titre ='"+f.Titre+"',Description='"+f.Description+"' where id ="+f.Id;
+            
             MyConnection.ExecuteNonQuery(Requete);
         }
 
@@ -48,6 +49,140 @@ namespace CompetencePlus.PackageFilieres
             return ListFiliere;
             
         }
+        public List<Filiere> SelectCode(string code)
+        {
+            string Requete = "Select * from Filieres where Code ='"+code+"'";
+            List<Filiere> ListFiliere = new List<Filiere>();
+            OleDbDataReader read = MyConnection.ExecuteReader(Requete);
+            while (read.Read())
+            {
+                Filiere f = new Filiere();
+                f.Id = read.GetInt32(0);
+                f.Titre = read.GetString(1);
+                f.Code = read.GetString(2);
+                f.Description = read.GetString(3);
+                ListFiliere.Add(f);
+
+            }
+            MyConnection.Close();
+            return ListFiliere;
+
+        }
+        public List<Filiere> SelectTitre(string Titre)
+        {
+            string Requete = "Select * from Filieres where Titre ='" + Titre + "'";
+            List<Filiere> ListFiliere = new List<Filiere>();
+            OleDbDataReader read = MyConnection.ExecuteReader(Requete);
+            while (read.Read())
+            {
+                Filiere f = new Filiere();
+                f.Id = read.GetInt32(0);
+                f.Titre = read.GetString(1);
+                f.Code = read.GetString(2);
+                f.Description = read.GetString(3);
+                ListFiliere.Add(f);
+
+            }
+            MyConnection.Close();
+            return ListFiliere;
+
+        }
+        public List<Filiere> SelectDescription(string Description)
+        {
+            string Requete = "Select * from Filieres where Description ='" + Description + "'";
+            List<Filiere> ListFiliere = new List<Filiere>();
+            OleDbDataReader read = MyConnection.ExecuteReader(Requete);
+            while (read.Read())
+            {
+                Filiere f = new Filiere();
+                f.Id = read.GetInt32(0);
+                f.Titre = read.GetString(1);
+                f.Code = read.GetString(2);
+                f.Description = read.GetString(3);
+                ListFiliere.Add(f);
+
+            }
+            MyConnection.Close();
+            return ListFiliere;
+
+        }
+        public List<Filiere> SelectCodeAndTitle(string code,string Title)
+        {
+            string Requete = "Select * from Filieres where Code ='" + code + "' And Titre ='"+Title+"'";
+            List<Filiere> ListFiliere = new List<Filiere>();
+            OleDbDataReader read = MyConnection.ExecuteReader(Requete);
+            while (read.Read())
+            {
+                Filiere f = new Filiere();
+                f.Id = read.GetInt32(0);
+                f.Titre = read.GetString(1);
+                f.Code = read.GetString(2);
+                f.Description = read.GetString(3);
+                ListFiliere.Add(f);
+
+            }
+            MyConnection.Close();
+            return ListFiliere;
+
+        }
+        public List<Filiere> SelectCodeAndDescription(string code, string Description)
+        {
+            string Requete = "Select * from Filieres where Code ='" + code + "' And Description ='" + Description + "'";
+            List<Filiere> ListFiliere = new List<Filiere>();
+            OleDbDataReader read = MyConnection.ExecuteReader(Requete);
+            while (read.Read())
+            {
+                Filiere f = new Filiere();
+                f.Id = read.GetInt32(0);
+                f.Titre = read.GetString(1);
+                f.Code = read.GetString(2);
+                f.Description = read.GetString(3);
+                ListFiliere.Add(f);
+
+            }
+            MyConnection.Close();
+            return ListFiliere;
+
+        }
+        public List<Filiere> SelectTitreAndDescription(string Title, string Description)
+        {
+            string Requete = "Select * from Filieres where Titre ='" + Title + "' And Description ='" + Description + "'";
+            List<Filiere> ListFiliere = new List<Filiere>();
+            OleDbDataReader read = MyConnection.ExecuteReader(Requete);
+            while (read.Read())
+            {
+                Filiere f = new Filiere();
+                f.Id = read.GetInt32(0);
+                f.Titre = read.GetString(1);
+                f.Code = read.GetString(2);
+                f.Description = read.GetString(3);
+                ListFiliere.Add(f);
+
+            }
+            MyConnection.Close();
+            return ListFiliere;
+
+        }
+        public List<Filiere> SelectCodeAndDescriptionAndTitle(string code, string Description,string Title)
+        {
+            string Requete = "Select * from Filieres where Code ='" + code + "' And Description ='" + Description + "' And Titre ='"+Title+"'";
+            List<Filiere> ListFiliere = new List<Filiere>();
+            OleDbDataReader read = MyConnection.ExecuteReader(Requete);
+            while (read.Read())
+            {
+                Filiere f = new Filiere();
+                f.Id = read.GetInt32(0);
+                f.Titre = read.GetString(1);
+                f.Code = read.GetString(2);
+                f.Description = read.GetString(3);
+                ListFiliere.Add(f);
+
+            }
+            MyConnection.Close();
+            return ListFiliere;
+
+        }
+      
 
         public Filiere FindById(int id)
         {

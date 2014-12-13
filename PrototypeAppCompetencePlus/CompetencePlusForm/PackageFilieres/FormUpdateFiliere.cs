@@ -15,7 +15,9 @@ namespace CompetencePlus.PackageFilieres
         {
             InitializeComponent();
         }
+        int id;
         public void Update(Filiere f) {
+            id = f.Id;
             CodeTextBox.Text = f.Code;
             TitreTextBox.Text = f.Titre;
             DescriptionTextBox.Text = f.Description;
@@ -29,10 +31,12 @@ namespace CompetencePlus.PackageFilieres
         private void BtUpdate_Click(object sender, EventArgs e)
         {
             Filiere f = new Filiere();
+            f.Id = id;
             f.Code = CodeTextBox.Text;
             f.Titre = TitreTextBox.Text;
             f.Description = DescriptionTextBox.Text;
             new FiliereBAO().Update(f);
+            this.Dispose();
         }
     }
 }
