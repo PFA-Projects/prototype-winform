@@ -1,4 +1,0 @@
-C:\Users\ESSARRAJ\Documents\GitHub\prototype-application-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusWeb\bin\CompetencePlusWeb.dll
-C:\Users\ESSARRAJ\Documents\GitHub\prototype-application-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusWeb\bin\CompetencePlusWeb.pdb
-C:\Users\ESSARRAJ\Documents\GitHub\prototype-application-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusWeb\obj\Debug\CompetencePlusWeb.dll
-C:\Users\ESSARRAJ\Documents\GitHub\prototype-application-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusWeb\obj\Debug\CompetencePlusWeb.pdb
