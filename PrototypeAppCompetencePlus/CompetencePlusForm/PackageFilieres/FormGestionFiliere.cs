@@ -67,5 +67,74 @@ namespace CompetencePlus.PackageFilieres
             }
             catch (Exception) { }
         }
+
+        private void BtFirst_Click(object sender, EventArgs e)
+        {
+            filiereBindingSource.Position = 0;
+        }
+
+        private void BtLast_Click(object sender, EventArgs e)
+        {
+            filiereBindingSource.Position = filiereBindingSource.Count;
+        }
+
+        private void BtPrevious_Click(object sender, EventArgs e)
+        {
+            filiereBindingSource.Position = filiereBindingSource.Position - 1;
+        }
+
+        private void BtNext_Click(object sender, EventArgs e)
+        {
+            filiereBindingSource.Position = filiereBindingSource.Position + 1;
+        }
+
+        private void BtRecherche_Click(object sender, EventArgs e)
+        {
+            if (CodeTextBox.Text != "" && TitleTextBox.Text != "" && DescriptionTextBox.Text != "")
+            {
+                filiereBindingSource.DataSource = null;
+                filiereBindingSource.DataSource = new FiliereBAO().SelectCodeAndDescriptionAndTitle(CodeTextBox.Text, DescriptionTextBox.Text, TitleTextBox.Text);
+            }else
+                if (CodeTextBox.Text!=""&&TitleTextBox.Text!="")
+                {
+                     filiereBindingSource.DataSource = null;
+                     filiereBindingSource.DataSource = new FiliereBAO().SelectCodeAndTitle(CodeTextBox.Text,TitleTextBox.Text);
+                
+                }else
+                    if (CodeTextBox.Text!=""&&DescriptionTextBox.Text!="")
+                    {
+                         filiereBindingSource.DataSource = null;
+                         filiereBindingSource.DataSource = new FiliereBAO().SelectCodeAndDescription(CodeTextBox.Text,DescriptionTextBox.Text);
+                    }
+                    else
+                        if (CodeTextBox.Text != "" && DescriptionTextBox.Text != "")
+                        {
+                            filiereBindingSource.DataSource = null;
+                            filiereBindingSource.DataSource = new FiliereBAO().SelectCodeAndDescription(CodeTextBox.Text, DescriptionTextBox.Text);
+                        }
+            else
+                            if (TitleTextBox.Text != "" && DescriptionTextBox.Text != "")
+                            {
+                                filiereBindingSource.DataSource = null;
+                                filiereBindingSource.DataSource = new FiliereBAO().SelectTitreAndDescription(TitleTextBox.Text, DescriptionTextBox.Text);
+                            }
+                            else
+
+            if (CodeTextBox.Text!="")
+            {
+                filiereBindingSource.DataSource = null;
+                filiereBindingSource.DataSource = new FiliereBAO().SelectCode(CodeTextBox.Text);
+            } else
+            if (TitleTextBox.Text != "")
+            {
+                filiereBindingSource.DataSource = null;
+                filiereBindingSource.DataSource = new FiliereBAO().SelectTitre(TitleTextBox.Text);
+            }else
+                if (DescriptionTextBox.Text != "")
+                {
+                    filiereBindingSource.DataSource = null;
+                    filiereBindingSource.DataSource = new FiliereBAO().SelectDescription(DescriptionTextBox.Text);
+                }
+        }
     }
 }

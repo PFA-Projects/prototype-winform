@@ -6,3 +6,4 @@ C:\Users\Abdellah\Documents\GitHub\prototype-application-winform-competence-plus
 C:\Users\Abdellah\Documents\GitHub\prototype-application-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusWeb\bin\CompetencePlusWeb.pdb
 C:\Users\Abdellah\Documents\GitHub\prototype-application-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusWeb\obj\Debug\CompetencePlusWeb.dll
 C:\Users\Abdellah\Documents\GitHub\prototype-application-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusWeb\obj\Debug\CompetencePlusWeb.pdb
+C:\Users\Abdellah\Documents\GitHub\prototype-application-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusWeb\obj\Debug\CompetencePlusWeb.csprojResolveAssemblyReference.cache
