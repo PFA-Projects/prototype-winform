@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CompetencePlus.PackageFilieres
+namespace CompetencePlus
 {
-    class Class2
+    class Class1
     {
     }
 }

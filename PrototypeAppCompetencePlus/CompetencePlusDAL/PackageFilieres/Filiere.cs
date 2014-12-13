@@ -21,12 +21,19 @@ namespace CompetencePlus.PackageFilieres
             get { return code; }
             set { code = value; }
         }
-        private string nom;
+        private string titre;
 
-        public string Nom
+        public string Titre
         {
-            get { return nom; }
-            set { nom = value; }
+            get { return titre; }
+            set { titre = value; }
+        }
+        private String description;
+
+        public String Description
+        {
+            get { return description; }
+            set { description = value; }
         }
 
         public Filiere()

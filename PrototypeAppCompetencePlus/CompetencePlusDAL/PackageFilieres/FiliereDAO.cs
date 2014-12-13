@@ -13,13 +13,13 @@ namespace CompetencePlus.PackageFilieres
     {
         public  void Add(Filiere f)
         {
-            string Requete = "Insert into Filieres values ('"+f.Code+"','"+f.Nom+"')";
+            string Requete = "Insert into Filieres(Titre,Code,Description) values ('" + f.Titre + "','" + f.Code +"','"+f.Description+ "')";
             MyConnection.ExecuteNonQuery(Requete);
         }
 
         public  void Update(Filiere f )
         {
-            string Requete = "Update Filieres set Code ='"+f.Code+"',Nom ='"+f.Nom+"' where id ="+f.Id;
+            string Requete = "Update Filieres set Code ='"+f.Code+"',Titre ='"+f.Titre+",Description="+f.Description+"' where id ="+f.Id;
             MyConnection.ExecuteNonQuery(Requete);
         }
 
@@ -38,8 +38,9 @@ namespace CompetencePlus.PackageFilieres
             {
                 Filiere f = new Filiere();
                 f.Id = read.GetInt32(0);
-                f.Code = read.GetString(1);
-                f.Nom = read.GetString(2);
+                f.Titre = read.GetString(1);
+                f.Code = read.GetString(2);
+                f.Description = read.GetString(3);
                 ListFiliere.Add(f);
                 
             }
@@ -56,7 +57,7 @@ namespace CompetencePlus.PackageFilieres
             Filiere f = new Filiere();
             f.Id = read.GetInt32(0);
             f.Code = read.GetString(1);
-            f.Nom = read.GetString(2);
+            f.Titre = read.GetString(2);
             return f;
         }
         public Filiere FindByName(string Name)
@@ -66,7 +67,7 @@ namespace CompetencePlus.PackageFilieres
             Filiere f = new Filiere();
             f.Id = read.GetInt32(0);
             f.Code = read.GetString(1);
-            f.Nom = read.GetString(2);
+            f.Titre = read.GetString(2);
             return f;
         }
 
