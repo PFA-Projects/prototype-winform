@@ -19,7 +19,6 @@ namespace CompetencePlus.PackageFilieres
         private void BtSave_Click(object sender, EventArgs e)
         {
             Filiere filiere = new Filiere();
-            filiere.Id = 0;
             filiere.Code = CodeTextBox.Text;
             filiere.Titre = TitreTextBox.Text;
             filiere.Description = DescriptionTextBox.Text;

@@ -15,27 +15,31 @@ namespace CompetencePlus.PackageFilieres
         {
             InitializeComponent();
         }
-        int id;
-        public void Update(Filiere f) {
-            id = f.Id;
-            CodeTextBox.Text = f.Code;
-            TitreTextBox.Text = f.Titre;
-            DescriptionTextBox.Text = f.Description;
-        
-        }
-        private void FormUpdateFiliere_Load(object sender, EventArgs e)
+        public FormUpdateFiliere(Filiere filier)
         {
+            InitializeComponent();
+            UpdateInterface(filier);
+        }
 
+        private Filiere filier;
+        private void UpdateInterface(Filiere f) {
+            filier = f;
+            CodeTextBox.Text = filier.Code;
+            TitreTextBox.Text = filier.Titre;
+            DescriptionTextBox.Text = filier.Description;
         }
 
         private void BtUpdate_Click(object sender, EventArgs e)
         {
-            Filiere f = new Filiere();
-            f.Id = id;
-            f.Code = CodeTextBox.Text;
-            f.Titre = TitreTextBox.Text;
-            f.Description = DescriptionTextBox.Text;
-            new FiliereBAO().Update(f);
+            filier.Code = CodeTextBox.Text;
+            filier.Titre = TitreTextBox.Text;
+            filier.Description = DescriptionTextBox.Text;
+            new FiliereBAO().Update(filier);
+            this.Dispose();
+        }
+
+        private void BtCancel_Click(object sender, EventArgs e)
+        {
             this.Dispose();
         }
     }

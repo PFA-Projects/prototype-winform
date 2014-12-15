@@ -49,14 +49,15 @@
             this.gestionDinformationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gérerFiliereToolStripMenuItem});
             this.gestionDinformationToolStripMenuItem.Name = "gestionDinformationToolStripMenuItem";
-            this.gestionDinformationToolStripMenuItem.Size = new System.Drawing.Size(135, 20);
-            this.gestionDinformationToolStripMenuItem.Text = "Gestion d\'information";
+            this.gestionDinformationToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.gestionDinformationToolStripMenuItem.Text = "Paramétrage";
+            this.gestionDinformationToolStripMenuItem.Click += new System.EventHandler(this.gestionDinformationToolStripMenuItem_Click);
             // 
             // gérerFiliereToolStripMenuItem
             // 
             this.gérerFiliereToolStripMenuItem.Name = "gérerFiliereToolStripMenuItem";
-            this.gérerFiliereToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.gérerFiliereToolStripMenuItem.Text = "Gérer filiere";
+            this.gérerFiliereToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.gérerFiliereToolStripMenuItem.Text = "Gestion des filières";
             this.gérerFiliereToolStripMenuItem.Click += new System.EventHandler(this.gérerFiliereToolStripMenuItem_Click);
             // 
             // MenuApplication
@@ -67,7 +68,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MenuApplication";
-            this.Text = "MenuApplication";
+            this.Text = "Prototype - CompétencePlus";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -15,12 +15,12 @@ namespace CompetencePlus.Outils
 
         public static void ExecuteNonQuery(string Requete) {
            string ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\CompétencePlus.accdb;Persist Security Info=True";
-            Connection = new OleDbConnection(ConnectionString);
-        Command=Connection.CreateCommand();
-        Command.CommandText = Requete;
-        Connection.Open();
-         Command.ExecuteNonQuery();
-         Connection.Close();
+           Connection = new OleDbConnection(ConnectionString);
+           Command=Connection.CreateCommand();
+           Command.CommandText = Requete;
+           Connection.Open();
+           Command.ExecuteNonQuery();
+           Connection.Close();
         }
 
         public static OleDbDataReader ExecuteReader(string Requete) {

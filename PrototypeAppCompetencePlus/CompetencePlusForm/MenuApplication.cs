@@ -22,5 +22,10 @@ namespace CompetencePlus
             FormGestionFiliere f = new FormGestionFiliere();
             f.Show();
         }
+
+        private void gestionDinformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

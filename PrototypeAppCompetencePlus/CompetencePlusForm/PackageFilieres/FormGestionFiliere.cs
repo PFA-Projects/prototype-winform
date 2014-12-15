@@ -15,7 +15,12 @@ namespace CompetencePlus.PackageFilieres
         {
             InitializeComponent();
         }
-        public void Actualiser() {
+        private void FormGestionFiliere_Load(object sender, EventArgs e)
+        {
+            this.refresh();
+        }
+        public void refresh()
+        {
             filiereBindingSource.DataSource = null;
             filiereBindingSource.DataSource = new FiliereBAO().Select();
             try
@@ -24,48 +29,43 @@ namespace CompetencePlus.PackageFilieres
                 TitreLabel.Text = f.Titre;
                 CodeLabel.Text = f.Code;
             }
-            catch (Exception) { }
-            
-                
-              
-           
+            catch (Exception e) {
+                MessageBox.Show(e.Message);
+            }
+
         }
 
-        private void FormGestionFiliere_Load(object sender, EventArgs e)
-        {
-            this.Actualiser();
-        }
 
         private void BtAdd_Click(object sender, EventArgs e)
         {
             FormFiliere f = new FormFiliere();
             f.ShowDialog();
-            this.Actualiser();
+            this.refresh();
         }
 
         private void filiereDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                Filiere f = (Filiere)filiereBindingSource.Current;
-                TitreLabel.Text = f.Titre;
-                CodeLabel.Text = f.Code;
-          
-
-            if (e.ColumnIndex == 2)
+                Filiere filier = (Filiere)filiereBindingSource.Current;
+                TitreLabel.Text = filier.Titre;
+                CodeLabel.Text = filier.Code;
+                if (e.ColumnIndex == 2)
+                {
+                    FormUpdateFiliere form = new FormUpdateFiliere(filier);
+                    form.ShowDialog();
+                    this.refresh();
+                }
+                if (e.ColumnIndex==3)
+                {
+                    new FiliereBAO().Delete(filier.Id);
+                    this.refresh();
+                }
+            }
+            catch (Exception exception)
             {
-                FormUpdateFiliere fu = new FormUpdateFiliere();
-                fu.Update(f);
-                fu.ShowDialog();
-                this.Actualiser();
+                MessageBox.Show(exception.Message);
             }
-            if (e.ColumnIndex==3)
-            {
-                new FiliereBAO().Delete(f.Id);
-                this.Actualiser();
-            }
-            }
-            catch (Exception) { }
         }
 
         private void BtFirst_Click(object sender, EventArgs e)
@@ -88,53 +88,15 @@ namespace CompetencePlus.PackageFilieres
             filiereBindingSource.Position = filiereBindingSource.Position + 1;
         }
 
-        private void BtRecherche_Click(object sender, EventArgs e)
+        private void BtResearch_Click(object sender, EventArgs e)
         {
-            if (CodeTextBox.Text != "" && TitleTextBox.Text != "" && DescriptionTextBox.Text != "")
-            {
-                filiereBindingSource.DataSource = null;
-                filiereBindingSource.DataSource = new FiliereBAO().SelectCodeAndDescriptionAndTitle(CodeTextBox.Text, DescriptionTextBox.Text, TitleTextBox.Text);
-            }else
-                if (CodeTextBox.Text!=""&&TitleTextBox.Text!="")
-                {
-                     filiereBindingSource.DataSource = null;
-                     filiereBindingSource.DataSource = new FiliereBAO().SelectCodeAndTitle(CodeTextBox.Text,TitleTextBox.Text);
-                
-                }else
-                    if (CodeTextBox.Text!=""&&DescriptionTextBox.Text!="")
-                    {
-                         filiereBindingSource.DataSource = null;
-                         filiereBindingSource.DataSource = new FiliereBAO().SelectCodeAndDescription(CodeTextBox.Text,DescriptionTextBox.Text);
-                    }
-                    else
-                        if (CodeTextBox.Text != "" && DescriptionTextBox.Text != "")
-                        {
-                            filiereBindingSource.DataSource = null;
-                            filiereBindingSource.DataSource = new FiliereBAO().SelectCodeAndDescription(CodeTextBox.Text, DescriptionTextBox.Text);
-                        }
-            else
-                            if (TitleTextBox.Text != "" && DescriptionTextBox.Text != "")
-                            {
-                                filiereBindingSource.DataSource = null;
-                                filiereBindingSource.DataSource = new FiliereBAO().SelectTitreAndDescription(TitleTextBox.Text, DescriptionTextBox.Text);
-                            }
-                            else
-
-            if (CodeTextBox.Text!="")
-            {
-                filiereBindingSource.DataSource = null;
-                filiereBindingSource.DataSource = new FiliereBAO().SelectCode(CodeTextBox.Text);
-            } else
-            if (TitleTextBox.Text != "")
-            {
-                filiereBindingSource.DataSource = null;
-                filiereBindingSource.DataSource = new FiliereBAO().SelectTitre(TitleTextBox.Text);
-            }else
-                if (DescriptionTextBox.Text != "")
-                {
-                    filiereBindingSource.DataSource = null;
-                    filiereBindingSource.DataSource = new FiliereBAO().SelectDescription(DescriptionTextBox.Text);
-                }
+            Filiere filier = new Filiere();
+            filier.Code = CodeTextBox.Text;
+            filier.Description = DescriptionTextBox.Text;
+            filier.Titre = TitleTextBox.Text;
+            filiereBindingSource.DataSource = null;
+            filiereBindingSource.DataSource = new FiliereBAO().FindByFilier(filier);
+          
         }
     }
 }
