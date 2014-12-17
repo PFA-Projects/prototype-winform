@@ -6,3 +6,8 @@ C:\Users\Abdellah\Documents\GitHub\prototype-application-winform-competence-plus
 C:\Users\Abdellah\Documents\GitHub\prototype-application-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusDAL\bin\Debug\CompetencePlusDAL.pdb
 C:\Users\Abdellah\Documents\GitHub\prototype-application-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusDAL\obj\Debug\CompetencePlusDAL.dll
 C:\Users\Abdellah\Documents\GitHub\prototype-application-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusDAL\obj\Debug\CompetencePlusDAL.pdb
+C:\Users\Abdellah\Documents\GitHub\Prototype-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusDAL\bin\Debug\CompetencePlusDAL.dll
+C:\Users\Abdellah\Documents\GitHub\Prototype-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusDAL\bin\Debug\CompetencePlusDAL.pdb
+C:\Users\Abdellah\Documents\GitHub\Prototype-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusDAL\obj\Debug\CompetencePlusDAL.csprojResolveAssemblyReference.cache
+C:\Users\Abdellah\Documents\GitHub\Prototype-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusDAL\obj\Debug\CompetencePlusDAL.dll
+C:\Users\Abdellah\Documents\GitHub\Prototype-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusDAL\obj\Debug\CompetencePlusDAL.pdb

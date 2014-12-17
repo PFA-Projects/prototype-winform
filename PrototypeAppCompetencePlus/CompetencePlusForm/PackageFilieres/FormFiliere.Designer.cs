@@ -28,16 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFiliere));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.BtCancel = new System.Windows.Forms.Button();
-            this.BtSave = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.DescriptionTextBox = new System.Windows.Forms.TextBox();
             this.CodeTextBox = new System.Windows.Forms.TextBox();
             this.TitreTextBox = new System.Windows.Forms.TextBox();
+            this.BtCancel = new System.Windows.Forms.Button();
+            this.BtSave = new System.Windows.Forms.Button();
+            this.errorProviderTitle = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderCode = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderDescription = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTitle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDescription)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -54,26 +62,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filère";
-            // 
-            // BtCancel
-            // 
-            this.BtCancel.Location = new System.Drawing.Point(229, 252);
-            this.BtCancel.Name = "BtCancel";
-            this.BtCancel.Size = new System.Drawing.Size(102, 23);
-            this.BtCancel.TabIndex = 7;
-            this.BtCancel.Text = "Annuler";
-            this.BtCancel.UseVisualStyleBackColor = true;
-            this.BtCancel.Click += new System.EventHandler(this.BtCancel_Click);
-            // 
-            // BtSave
-            // 
-            this.BtSave.Location = new System.Drawing.Point(121, 252);
-            this.BtSave.Name = "BtSave";
-            this.BtSave.Size = new System.Drawing.Size(102, 23);
-            this.BtSave.TabIndex = 6;
-            this.BtSave.Text = "Enregistrer";
-            this.BtSave.UseVisualStyleBackColor = true;
-            this.BtSave.Click += new System.EventHandler(this.BtSave_Click);
             // 
             // label3
             // 
@@ -107,8 +95,9 @@
             this.DescriptionTextBox.Location = new System.Drawing.Point(109, 99);
             this.DescriptionTextBox.Multiline = true;
             this.DescriptionTextBox.Name = "DescriptionTextBox";
-            this.DescriptionTextBox.Size = new System.Drawing.Size(402, 129);
+            this.DescriptionTextBox.Size = new System.Drawing.Size(372, 129);
             this.DescriptionTextBox.TabIndex = 2;
+            this.DescriptionTextBox.Leave += new System.EventHandler(this.DescriptionTextBox_Leave);
             // 
             // CodeTextBox
             // 
@@ -117,13 +106,53 @@
             this.CodeTextBox.Name = "CodeTextBox";
             this.CodeTextBox.Size = new System.Drawing.Size(163, 20);
             this.CodeTextBox.TabIndex = 1;
+            this.CodeTextBox.Leave += new System.EventHandler(this.CodeTextBox_Leave);
             // 
             // TitreTextBox
             // 
             this.TitreTextBox.Location = new System.Drawing.Point(109, 19);
             this.TitreTextBox.Name = "TitreTextBox";
-            this.TitreTextBox.Size = new System.Drawing.Size(402, 20);
+            this.TitreTextBox.Size = new System.Drawing.Size(372, 20);
             this.TitreTextBox.TabIndex = 0;
+            this.TitreTextBox.Leave += new System.EventHandler(this.TitreTextBox_Leave);
+            // 
+            // BtCancel
+            // 
+            this.BtCancel.Location = new System.Drawing.Point(229, 252);
+            this.BtCancel.Name = "BtCancel";
+            this.BtCancel.Size = new System.Drawing.Size(102, 23);
+            this.BtCancel.TabIndex = 7;
+            this.BtCancel.Text = "Annuler";
+            this.BtCancel.UseVisualStyleBackColor = true;
+            this.BtCancel.Click += new System.EventHandler(this.BtCancel_Click);
+            // 
+            // BtSave
+            // 
+            this.BtSave.Location = new System.Drawing.Point(121, 252);
+            this.BtSave.Name = "BtSave";
+            this.BtSave.Size = new System.Drawing.Size(102, 23);
+            this.BtSave.TabIndex = 6;
+            this.BtSave.Text = "Enregistrer";
+            this.BtSave.UseVisualStyleBackColor = true;
+            this.BtSave.Click += new System.EventHandler(this.BtSave_Click);
+            // 
+            // errorProviderTitle
+            // 
+            this.errorProviderTitle.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderTitle.ContainerControl = this;
+            this.errorProviderTitle.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderTitle.Icon")));
+            // 
+            // errorProviderCode
+            // 
+            this.errorProviderCode.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderCode.ContainerControl = this;
+            this.errorProviderCode.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderCode.Icon")));
+            // 
+            // errorProviderDescription
+            // 
+            this.errorProviderDescription.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProviderDescription.ContainerControl = this;
+            this.errorProviderDescription.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderDescription.Icon")));
             // 
             // FormFiliere
             // 
@@ -135,8 +164,12 @@
             this.Controls.Add(this.BtSave);
             this.Name = "FormFiliere";
             this.Text = "Ajouter un filière";
+            this.Load += new System.EventHandler(this.FormFiliere_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTitle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDescription)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -152,5 +185,8 @@
         private System.Windows.Forms.TextBox DescriptionTextBox;
         private System.Windows.Forms.TextBox CodeTextBox;
         private System.Windows.Forms.TextBox TitreTextBox;
+        private System.Windows.Forms.ErrorProvider errorProviderTitle;
+        private System.Windows.Forms.ErrorProvider errorProviderCode;
+        private System.Windows.Forms.ErrorProvider errorProviderDescription;
     }
 }

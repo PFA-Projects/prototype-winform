@@ -79,7 +79,10 @@ namespace CompetencePlus.PackageFilieres
         {
 
             string Requete = "Select * from Filieres ";
-            if (filier.Code != "" || filier.Titre != "" || filier.Description != "") Requete += " where ";
+            if (filier.Code != "" || filier.Titre != "" || filier.Description != "")
+            {
+                Requete += " where ";
+            }
             bool and = false;
             if (filier.Code != "") {
                 Requete += " Code like '%" + filier.Code + "%'";
