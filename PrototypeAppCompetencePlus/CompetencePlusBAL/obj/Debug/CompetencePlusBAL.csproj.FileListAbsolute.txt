@@ -12,3 +12,10 @@ C:\Users\Abdellah\Documents\GitHub\prototype-application-winform-competence-plus
 C:\Users\Abdellah\Documents\GitHub\prototype-application-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusBAL\obj\Debug\CompetencePlusBAL.csprojResolveAssemblyReference.cache
 C:\Users\Abdellah\Documents\GitHub\prototype-application-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusBAL\obj\Debug\CompetencePlusBAL.dll
 C:\Users\Abdellah\Documents\GitHub\prototype-application-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusBAL\obj\Debug\CompetencePlusBAL.pdb
+C:\Users\Abdellah\Documents\GitHub\Prototype-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusBAL\bin\Debug\CompetencePlusBAL.dll
+C:\Users\Abdellah\Documents\GitHub\Prototype-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusBAL\bin\Debug\CompetencePlusBAL.pdb
+C:\Users\Abdellah\Documents\GitHub\Prototype-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusBAL\bin\Debug\CompetencePlusDAL.dll
+C:\Users\Abdellah\Documents\GitHub\Prototype-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusBAL\bin\Debug\CompetencePlusDAL.pdb
+C:\Users\Abdellah\Documents\GitHub\Prototype-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusBAL\obj\Debug\CompetencePlusBAL.csprojResolveAssemblyReference.cache
+C:\Users\Abdellah\Documents\GitHub\Prototype-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusBAL\obj\Debug\CompetencePlusBAL.dll
+C:\Users\Abdellah\Documents\GitHub\Prototype-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusBAL\obj\Debug\CompetencePlusBAL.pdb

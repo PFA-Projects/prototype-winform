@@ -56,7 +56,7 @@ namespace CompetencePlus.PackageFilieres
                     form.ShowDialog();
                     this.refresh();
                 }
-                if (e.ColumnIndex==3)
+                if (e.ColumnIndex==3&&MessageBox.Show("voulez vous supprimer cette filiere","Information dialog",MessageBoxButtons.YesNo)==DialogResult.Yes)
                 {
                     new FiliereBAO().Delete(filier.Id);
                     this.refresh();
