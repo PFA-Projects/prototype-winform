@@ -41,11 +41,9 @@
             this.BtSave = new System.Windows.Forms.Button();
             this.errorProviderTitle = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderCode = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProviderDescription = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTitle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCode)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDescription)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -97,7 +95,6 @@
             this.DescriptionTextBox.Name = "DescriptionTextBox";
             this.DescriptionTextBox.Size = new System.Drawing.Size(372, 129);
             this.DescriptionTextBox.TabIndex = 2;
-            this.DescriptionTextBox.Leave += new System.EventHandler(this.DescriptionTextBox_Leave);
             // 
             // CodeTextBox
             // 
@@ -107,6 +104,7 @@
             this.CodeTextBox.Size = new System.Drawing.Size(163, 20);
             this.CodeTextBox.TabIndex = 1;
             this.CodeTextBox.Leave += new System.EventHandler(this.CodeTextBox_Leave);
+            this.CodeTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.CodeTextBox_Validating);
             // 
             // TitreTextBox
             // 
@@ -115,9 +113,11 @@
             this.TitreTextBox.Size = new System.Drawing.Size(372, 20);
             this.TitreTextBox.TabIndex = 0;
             this.TitreTextBox.Leave += new System.EventHandler(this.TitreTextBox_Leave);
+            this.TitreTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.TitreTextBox_Validating);
             // 
             // BtCancel
             // 
+            this.BtCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtCancel.Location = new System.Drawing.Point(229, 252);
             this.BtCancel.Name = "BtCancel";
             this.BtCancel.Size = new System.Drawing.Size(102, 23);
@@ -148,16 +148,12 @@
             this.errorProviderCode.ContainerControl = this;
             this.errorProviderCode.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderCode.Icon")));
             // 
-            // errorProviderDescription
-            // 
-            this.errorProviderDescription.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.errorProviderDescription.ContainerControl = this;
-            this.errorProviderDescription.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderDescription.Icon")));
-            // 
             // FormFiliere
             // 
+            this.AcceptButton = this.BtSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BtCancel;
             this.ClientSize = new System.Drawing.Size(541, 285);
             this.Controls.Add(this.BtCancel);
             this.Controls.Add(this.groupBox1);
@@ -169,7 +165,6 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTitle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderCode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderDescription)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -187,6 +182,5 @@
         private System.Windows.Forms.TextBox TitreTextBox;
         private System.Windows.Forms.ErrorProvider errorProviderTitle;
         private System.Windows.Forms.ErrorProvider errorProviderCode;
-        private System.Windows.Forms.ErrorProvider errorProviderDescription;
     }
 }

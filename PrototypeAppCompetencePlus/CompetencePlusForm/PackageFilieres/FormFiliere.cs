@@ -15,6 +15,10 @@ namespace CompetencePlus.PackageFilieres
         {
             InitializeComponent();
         }
+        private void FormFiliere_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void BtSave_Click(object sender, EventArgs e)
         {
@@ -31,33 +35,28 @@ namespace CompetencePlus.PackageFilieres
             this.Dispose();
         }
 
+   
         private void TitreTextBox_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(TitreTextBox.Text))
             {
                // errorProviderTitle.Icon =Properties.Resources.Error;
-                this.errorProviderTitle.Icon = new Icon(SystemIcons.Error,64,32);
-                 errorProviderTitle.SetError(TitreTextBox,"The text box is empty");
+                errorProviderTitle.Icon = new Icon(SystemIcons.Error,64,32);
+                errorProviderTitle.SetError(TitreTextBox,"Vous devez saisie le nom de la filière");
             }
             else
             {
-                    errorProviderTitle.Icon=Properties.Resources.Clear;
-                    errorProviderTitle.SetError(TitreTextBox, "ok");
+                errorProviderTitle.Icon=Properties.Resources.Clear;
+                errorProviderTitle.SetError(TitreTextBox, "ok");
             }
-        }
-
-        private void FormFiliere_Load(object sender, EventArgs e)
-        {
-            
         }
 
         private void CodeTextBox_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(TitreTextBox.Text))
+            if (string.IsNullOrEmpty(CodeTextBox.Text))
             {
-                // errorProviderTitle.Icon =Properties.Resources.Error;
                 this.errorProviderCode.Icon = new Icon(SystemIcons.Error, 64, 32);
-                errorProviderCode.SetError(CodeTextBox, "The text box is empty");
+                errorProviderCode.SetError(CodeTextBox, "Vous devez saisie le code de la filière");
             }
             else
             {
@@ -66,19 +65,18 @@ namespace CompetencePlus.PackageFilieres
             }
         }
 
-        private void DescriptionTextBox_Leave(object sender, EventArgs e)
+       
+
+        private void TitreTextBox_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrEmpty(TitreTextBox.Text))
-            {
-                // errorProviderTitle.Icon =Properties.Resources.Error;
-                this.errorProviderDescription.Icon = new Icon(SystemIcons.Error, 64, 32);
-                errorProviderDescription.SetError(DescriptionTextBox, "The text box is empty");
-            }
-            else
-            {
-                errorProviderDescription.Icon = Properties.Resources.Clear;
-                errorProviderDescription.SetError(CodeTextBox, "ok");
-            }
+            if (TitreTextBox.Text == "")
+                e.Cancel = true;
+        }
+
+        private void CodeTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            if (CodeTextBox.Text == "")
+                e.Cancel = true;
         }
     }
 }
