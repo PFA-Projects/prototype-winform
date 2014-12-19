@@ -12,7 +12,7 @@ namespace CompetencePlus.PackageStagiaires
     {
         public  void Add(Stagiaire s)
         {
-            string Requete = "insert into stagiaires(Nom,Prenom,DateNaissance,sexe,Cin,Email,Telephone,Adresse,Images,Etat,idGroupe) values ('" +
+            string Requete = "insert into stagiaires(Nom,Prenom,DateNaissance,sex,Cin,Email,Telephone,Adresse,ProfileImage,Etat,idGroupe) values ('" +
                 s.Nom + "','" + s.Prenom + "','" + s.DateNaissance + "'," + 1 + ",'" + s.Cin + "','" + s.Email + "','" + s.Telephone + "','" + s.Adresse + "','" +
                 s.ProfilImage + "'," + s.Etat + "," + s.Groupe.Id+")";
  
@@ -20,8 +20,8 @@ namespace CompetencePlus.PackageStagiaires
         }
         public void Update(Stagiaire s)
         {
-            String Requete = "Update Stagiaires set Nom='"+s.Nom+"',Prenom='"+s.Prenom+"',DateNaissance='"+s.DateNaissance+"',Sexe="+s.Sexe+
-                ",Cin='"+s.Cin+"',Email='"+s.Email+"',Telephone ='"+s.Telephone+"',Adresse='"+s.Adresse+"',Images = '"+s.ProfilImage+"',IdGroupe="+s.Groupe.Id+" where id="+s.Id;
+            String Requete = "Update Stagiaires set Nom='"+s.Nom+"',Prenom='"+s.Prenom+"',DateNaissance='"+s.DateNaissance+"',Sex="+s.Sexe+
+                ",Cin='"+s.Cin+"',Email='"+s.Email+"',Telephone ='"+s.Telephone+"',Adresse='"+s.Adresse+"',ProfileImage = '"+s.ProfilImage+"',IdGroupe="+s.Groupe.Id+" where id="+s.Id;
             MyConnection.ExecuteNonQuery(Requete);
         }
 
@@ -40,7 +40,7 @@ namespace CompetencePlus.PackageStagiaires
         public  List<Stagiaire> Select()
         {
             List<Stagiaire> ListStagiaires = new List<Stagiaire>();
-            String Requete = "Select * from Stagiaires where etat =1";
+            String Requete = "Select * from Stagiaires where Etat =1";
             OleDbDataReader read = MyConnection.ExecuteReader(Requete);
             while (read.Read())
             {

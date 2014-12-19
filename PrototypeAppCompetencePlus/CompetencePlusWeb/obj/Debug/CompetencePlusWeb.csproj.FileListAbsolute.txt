@@ -13,3 +13,8 @@ C:\Users\Abdellah\Documents\GitHub\Prototype-winform-competence-plus\PrototypeAp
 C:\Users\Abdellah\Documents\GitHub\Prototype-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusWeb\obj\Debug\CompetencePlusWeb.csprojResolveAssemblyReference.cache
 C:\Users\Abdellah\Documents\GitHub\Prototype-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusWeb\obj\Debug\CompetencePlusWeb.dll
 C:\Users\Abdellah\Documents\GitHub\Prototype-winform-competence-plus\PrototypeAppCompetencePlus\CompetencePlusWeb\obj\Debug\CompetencePlusWeb.pdb
+C:\Users\Abdellah\Documents\GitHub\prototype-winform\PrototypeAppCompetencePlus\CompetencePlusWeb\bin\CompetencePlusWeb.dll
+C:\Users\Abdellah\Documents\GitHub\prototype-winform\PrototypeAppCompetencePlus\CompetencePlusWeb\bin\CompetencePlusWeb.pdb
+C:\Users\Abdellah\Documents\GitHub\prototype-winform\PrototypeAppCompetencePlus\CompetencePlusWeb\obj\Debug\CompetencePlusWeb.csprojResolveAssemblyReference.cache
+C:\Users\Abdellah\Documents\GitHub\prototype-winform\PrototypeAppCompetencePlus\CompetencePlusWeb\obj\Debug\CompetencePlusWeb.dll
+C:\Users\Abdellah\Documents\GitHub\prototype-winform\PrototypeAppCompetencePlus\CompetencePlusWeb\obj\Debug\CompetencePlusWeb.pdb
