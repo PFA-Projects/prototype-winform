@@ -71,21 +71,60 @@ namespace CompetencePlus.PackageFilieres
         private void BtFirst_Click(object sender, EventArgs e)
         {
             filiereBindingSource.Position = 0;
+            try
+            {
+                Filiere filier = (Filiere)filiereBindingSource.Current;
+                TitreLabel.Text = filier.Titre;
+                CodeLabel.Text = filier.Code;
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void BtLast_Click(object sender, EventArgs e)
         {
             filiereBindingSource.Position = filiereBindingSource.Count;
+            try
+            {
+                Filiere filier = (Filiere)filiereBindingSource.Current;
+                TitreLabel.Text = filier.Titre;
+                CodeLabel.Text = filier.Code;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void BtPrevious_Click(object sender, EventArgs e)
         {
             filiereBindingSource.Position = filiereBindingSource.Position - 1;
+            try
+            {
+                Filiere filier = (Filiere)filiereBindingSource.Current;
+                TitreLabel.Text = filier.Titre;
+                CodeLabel.Text = filier.Code;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void BtNext_Click(object sender, EventArgs e)
         {
             filiereBindingSource.Position = filiereBindingSource.Position + 1;
+            try
+            {
+                Filiere filier = (Filiere)filiereBindingSource.Current;
+                TitreLabel.Text = filier.Titre;
+                CodeLabel.Text = filier.Code;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void BtResearch_Click(object sender, EventArgs e)

@@ -51,7 +51,7 @@ namespace CompetencePlus.Outils
             return read;
         }
         /// <summary>
-        /// Fermiture de la connexion aprés l'appelle de la méthode "ExecuteNonQuery"
+        /// Fermiture de la connexion aprés l'appelle de la méthode "ExecuteReader"
         /// </summary>
         public static void Close (){
             Connection.Close();
