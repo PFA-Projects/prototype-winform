@@ -11,6 +11,8 @@ namespace CompetencePlus.PackageFilieres
 {
     public partial class FormGestionFiliere : Form
     {
+
+        Filiere filier;
         public FormGestionFiliere()
         {
             InitializeComponent();
@@ -42,21 +44,29 @@ namespace CompetencePlus.PackageFilieres
             f.ShowDialog();
             this.refresh();
         }
-
         private void filiereDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                Filiere filier = (Filiere)filiereBindingSource.Current;
+                filier = (Filiere)filiereBindingSource.Current;
                 TitreLabel.Text = filier.Titre;
                 CodeLabel.Text = filier.Code;
                 if (e.ColumnIndex == 2)
                 {
-                    FormUpdateFiliere form = new FormUpdateFiliere(filier);
-                    form.ShowDialog();
-                    this.refresh();
+                    groupBox3.Enabled = false;
+                    BtFirst.Enabled = false;
+                    BtLast.Enabled = false;
+                    BtNext.Enabled = false;
+                    BtPrevious.Enabled = false;
+                    BtAdd.Enabled = false;
+                    groupBox2.Text = "Modifier";
+                    BtResearch.Text = "Enregistrer";
+                    TitleTextBox.Text = filier.Titre;
+                    CodeTextBox.Text = filier.Code;
+                    DescriptionTextBox.Text = filier.Description;
+                    BtCancel.Visible = true;
                 }
-                if (e.ColumnIndex==3&&MessageBox.Show("voulez vous supprimer cette filiere","Information dialog",MessageBoxButtons.YesNo)==DialogResult.Yes)
+                if (e.ColumnIndex == 3 && MessageBox.Show("voulez vous supprimer cette filiere", "Information dialog", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     new FiliereBAO().Delete(filier.Id);
                     this.refresh();
@@ -90,13 +100,50 @@ namespace CompetencePlus.PackageFilieres
 
         private void BtResearch_Click(object sender, EventArgs e)
         {
-            Filiere filier = new Filiere();
-            filier.Code = CodeTextBox.Text;
-            filier.Description = DescriptionTextBox.Text;
-            filier.Titre = TitleTextBox.Text;
-            filiereBindingSource.DataSource = null;
-            filiereBindingSource.DataSource = new FiliereBAO().FindByFilier(filier);
-          
+            if (groupBox2.Text == "Recherche")
+            {
+                Filiere filier = new Filiere();
+                filier.Code = CodeTextBox.Text;
+                filier.Description = DescriptionTextBox.Text;
+                filier.Titre = TitleTextBox.Text;
+                filiereBindingSource.DataSource = null;
+                filiereBindingSource.DataSource = new FiliereBAO().FindByFilier(filier);
+            }
+            if (groupBox2.Text == "Modifier")
+            {
+                this.filier.Code = CodeTextBox.Text;
+                this.filier.Titre = TitleTextBox.Text;
+                this.filier.Description = DescriptionTextBox.Text;
+                new FiliereBAO().Update(this.filier);
+                groupBox3.Enabled = true;
+                BtFirst.Enabled = true;
+                BtLast.Enabled = true;
+                BtNext.Enabled = true;
+                BtPrevious.Enabled = true;
+                BtAdd.Enabled = true;
+                groupBox2.Text = "Recherche";
+                BtResearch.Text = "Recherche";
+                this.refresh();
+            }
+        }
+
+        private void BtCancel_Click(object sender, EventArgs e)
+        {
+            if (groupBox2.Text == "Recherche")
+            {
+                this.refresh();
+            }
+            else
+            {
+                groupBox3.Enabled = true;
+                BtFirst.Enabled = true;
+                BtLast.Enabled = true;
+                BtNext.Enabled = true;
+                BtPrevious.Enabled = true;
+                BtAdd.Enabled = true;
+                groupBox2.Text = "Recherche";
+                BtResearch.Text = "Recherche";
+            }
         }
     }
 }

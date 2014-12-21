@@ -54,6 +54,7 @@
             this.BtNext = new System.Windows.Forms.Button();
             this.BtLast = new System.Windows.Forms.Button();
             this.BtAdd = new System.Windows.Forms.Button();
+            this.BtCancel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -79,7 +80,7 @@
             this.CodeLabel.AutoSize = true;
             this.CodeLabel.Location = new System.Drawing.Point(47, 56);
             this.CodeLabel.Name = "CodeLabel";
-            this.CodeLabel.Size = new System.Drawing.Size(31, 13);
+            this.CodeLabel.Size = new System.Drawing.Size(30, 13);
             this.CodeLabel.TabIndex = 3;
             this.CodeLabel.Text = "code";
             // 
@@ -90,7 +91,7 @@
             this.TitreLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.TitreLabel.Location = new System.Drawing.Point(47, 29);
             this.TitreLabel.Name = "TitreLabel";
-            this.TitreLabel.Size = new System.Drawing.Size(28, 13);
+            this.TitreLabel.Size = new System.Drawing.Size(29, 13);
             this.TitreLabel.TabIndex = 2;
             this.TitreLabel.Text = "Titre";
             // 
@@ -108,12 +109,13 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 13);
+            this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Titre";
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.BtCancel);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.BtResearch);
             this.groupBox2.Controls.Add(this.label4);
@@ -141,7 +143,7 @@
             // 
             this.BtResearch.Location = new System.Drawing.Point(75, 162);
             this.BtResearch.Name = "BtResearch";
-            this.BtResearch.Size = new System.Drawing.Size(114, 23);
+            this.BtResearch.Size = new System.Drawing.Size(108, 23);
             this.BtResearch.TabIndex = 7;
             this.BtResearch.Text = "Recherche";
             this.BtResearch.UseVisualStyleBackColor = true;
@@ -161,7 +163,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 13);
+            this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Titre";
             // 
@@ -306,6 +308,16 @@
             this.BtAdd.UseVisualStyleBackColor = true;
             this.BtAdd.Click += new System.EventHandler(this.BtAdd_Click);
             // 
+            // BtCancel
+            // 
+            this.BtCancel.Location = new System.Drawing.Point(189, 162);
+            this.BtCancel.Name = "BtCancel";
+            this.BtCancel.Size = new System.Drawing.Size(78, 23);
+            this.BtCancel.TabIndex = 9;
+            this.BtCancel.Text = "Annuler";
+            this.BtCancel.UseVisualStyleBackColor = true;
+            this.BtCancel.Click += new System.EventHandler(this.BtCancel_Click);
+            // 
             // FormGestionFiliere
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -360,5 +372,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewImageColumn Update;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
+        private System.Windows.Forms.Button BtCancel;
     }
 }
