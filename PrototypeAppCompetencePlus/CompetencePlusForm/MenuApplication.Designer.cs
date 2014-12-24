@@ -31,13 +31,19 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gestionDinformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gérerFiliereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionIndividuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gérerStagiaireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterUneInscriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gérerLesInscriptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gérerLesStagiairesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gestionDinformationToolStripMenuItem});
+            this.gestionDinformationToolStripMenuItem,
+            this.gestionIndividuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(443, 24);
@@ -60,6 +66,45 @@
             this.gérerFiliereToolStripMenuItem.Text = "Gestion des filières";
             this.gérerFiliereToolStripMenuItem.Click += new System.EventHandler(this.gérerFiliereToolStripMenuItem_Click);
             // 
+            // gestionIndividuToolStripMenuItem
+            // 
+            this.gestionIndividuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gérerStagiaireToolStripMenuItem});
+            this.gestionIndividuToolStripMenuItem.Name = "gestionIndividuToolStripMenuItem";
+            this.gestionIndividuToolStripMenuItem.Size = new System.Drawing.Size(105, 20);
+            this.gestionIndividuToolStripMenuItem.Text = "Gestion individu";
+            // 
+            // gérerStagiaireToolStripMenuItem
+            // 
+            this.gérerStagiaireToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterUneInscriptionToolStripMenuItem,
+            this.gérerLesInscriptionsToolStripMenuItem,
+            this.gérerLesStagiairesToolStripMenuItem});
+            this.gérerStagiaireToolStripMenuItem.Name = "gérerStagiaireToolStripMenuItem";
+            this.gérerStagiaireToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.gérerStagiaireToolStripMenuItem.Text = "Gestion stagiaires";
+            // 
+            // ajouterUneInscriptionToolStripMenuItem
+            // 
+            this.ajouterUneInscriptionToolStripMenuItem.Name = "ajouterUneInscriptionToolStripMenuItem";
+            this.ajouterUneInscriptionToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.ajouterUneInscriptionToolStripMenuItem.Text = "Ajouter une inscription";
+            this.ajouterUneInscriptionToolStripMenuItem.Click += new System.EventHandler(this.ajouterUneInscriptionToolStripMenuItem_Click);
+            // 
+            // gérerLesInscriptionsToolStripMenuItem
+            // 
+            this.gérerLesInscriptionsToolStripMenuItem.Name = "gérerLesInscriptionsToolStripMenuItem";
+            this.gérerLesInscriptionsToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.gérerLesInscriptionsToolStripMenuItem.Text = "Gérer les inscriptions";
+            this.gérerLesInscriptionsToolStripMenuItem.Click += new System.EventHandler(this.gérerLesInscriptionsToolStripMenuItem_Click);
+            // 
+            // gérerLesStagiairesToolStripMenuItem
+            // 
+            this.gérerLesStagiairesToolStripMenuItem.Name = "gérerLesStagiairesToolStripMenuItem";
+            this.gérerLesStagiairesToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.gérerLesStagiairesToolStripMenuItem.Text = "Gérer les stagiaires";
+            this.gérerLesStagiairesToolStripMenuItem.Click += new System.EventHandler(this.gérerLesStagiairesToolStripMenuItem_Click);
+            // 
             // MenuApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -81,5 +126,10 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem gestionDinformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gérerFiliereToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionIndividuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gérerStagiaireToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajouterUneInscriptionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gérerLesInscriptionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gérerLesStagiairesToolStripMenuItem;
     }
 }

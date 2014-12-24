@@ -30,6 +30,13 @@ namespace CompetencePlus.PackageGroupes
             get { return nom; }
             set { nom = value; }
         }
+        private string description;
+
+        public string Description
+        {
+            get { return description; }
+            set { description = value; }
+        }
         private Filiere filiere;
 
         public Filiere Filiere

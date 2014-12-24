@@ -49,7 +49,7 @@
     <Compile Include="MenuApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuApplication.Designer.cs">
+    <Compile Include="MenuApplication.designer.cs">
       <DependentUpon>MenuApplication.cs</DependentUpon>
     </Compile>
     <Compile Include="PackageFilieres\FormFiliere.cs">
@@ -70,6 +70,42 @@
     <Compile Include="PackageFilieres\FormUpdateFiliere.Designer.cs">
       <DependentUpon>FormUpdateFiliere.cs</DependentUpon>
     </Compile>
+    <Compile Include="PackageGroupes\FormGroupe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageGroupes\FormGroupe.Designer.cs">
+      <DependentUpon>FormGroupe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackageStagiaires\FormGestionInscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageStagiaires\FormGestionInscription.designer.cs">
+      <DependentUpon>FormGestionInscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackageStagiaires\FormGestionStagiaires.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageStagiaires\FormGestionStagiaires.designer.cs">
+      <DependentUpon>FormGestionStagiaires.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackageStagiaires\FormStagiairesConfirmerInscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageStagiaires\FormStagiairesConfirmerInscription.designer.cs">
+      <DependentUpon>FormStagiairesConfirmerInscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackageStagiaires\FormStagiairesInscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageStagiaires\FormStagiairesInscription.designer.cs">
+      <DependentUpon>FormStagiairesInscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackageStagiaires\FormUpdateStagiaires.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageStagiaires\FormUpdateStagiaires.designer.cs">
+      <DependentUpon>FormUpdateStagiaires.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MenuApplication.resx">
@@ -83,6 +119,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PackageFilieres\FormUpdateFiliere.resx">
       <DependentUpon>FormUpdateFiliere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageGroupes\FormGroupe.resx">
+      <DependentUpon>FormGroupe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageStagiaires\FormGestionInscription.resx">
+      <DependentUpon>FormGestionInscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageStagiaires\FormGestionStagiaires.resx">
+      <DependentUpon>FormGestionStagiaires.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageStagiaires\FormStagiairesConfirmerInscription.resx">
+      <DependentUpon>FormStagiairesConfirmerInscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageStagiaires\FormStagiairesInscription.resx">
+      <DependentUpon>FormStagiairesInscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageStagiaires\FormUpdateStagiaires.resx">
+      <DependentUpon>FormUpdateStagiaires.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -132,6 +186,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confirm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Profile.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
