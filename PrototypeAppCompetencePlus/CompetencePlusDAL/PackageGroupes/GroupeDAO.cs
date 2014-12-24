@@ -12,13 +12,13 @@ namespace CompetencePlus.PackageGroupes
     {
         public  void Add(Groupe g)
         {
-            string Requete = "Insert into Groupes values ('" + g.Code + "','" + g.Nom + "')";
+            string Requete = "Insert into Groupes values ('" +g.Nom  + "','" +g.Code+ "','" + g.Description +"',"+g.Filiere.Id +")";
             MyConnection.ExecuteNonQuery(Requete);
         }
 
         public  void Update(Groupe g)
         {
-            string Requete = "Update Filieres set Code ='" + g.Code + "',Nom ='" + g.Nom + "' where id =" + g.Id;
+            string Requete = "Update Filieres set Code ='" + g.Code + "',Nom ='" + g.Nom +"',Description='"+g.Description+"',IdFiliere="+g.Filiere.Id+" where id =" + g.Id;
             MyConnection.ExecuteNonQuery(Requete);
         }
 
@@ -61,7 +61,7 @@ namespace CompetencePlus.PackageGroupes
         }
         public Groupe FindByName(string Name)
         {
-            string Requete = "Select * from Groupes where Nom='Groupe 1'";
+            string Requete = "Select * from Groupes where Nom='"+Name+"'";
        
             OleDbDataReader read = MyConnection.ExecuteReader(Requete);
             read.Read();
