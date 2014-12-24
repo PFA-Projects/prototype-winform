@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using CompetencePlus.PackageFilieres;
+using CompetencePlus.PackageStagiaires;
 
 namespace CompetencePlus
 {
@@ -26,6 +27,24 @@ namespace CompetencePlus
         private void gestionDinformationToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ajouterUneInscriptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormStagiairesInscription f = new FormStagiairesInscription();
+            f.Show();
+        }
+
+        private void gérerLesInscriptionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormGestionInscription f = new FormGestionInscription();
+            f.Show();
+        }
+
+        private void gérerLesStagiairesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormGestionStagiaires f = new FormGestionStagiaires();
+            f.Show();
         }
     }
 }

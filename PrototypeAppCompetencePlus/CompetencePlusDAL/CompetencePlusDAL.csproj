@@ -40,14 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PackageGroupes\Groupe.cs" />
+    <Compile Include="PackageGroupes\GroupeDAO.cs" />
     <Compile Include="Tools\IGestion.cs" />
     <Compile Include="Tools\MyConnection.cs" />
     <Compile Include="PackageFilieres\FiliereDAO.cs" />
-    <Compile Include="PackageGroupes\GroupeDAO.cs" />
     <Compile Include="PackageStagiaires\StagiaireDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PackageFilieres\Filiere.cs" />
-    <Compile Include="PackageGroupes\Groupe.cs" />
     <Compile Include="PackageStagiaires\Stagiaire.cs" />
   </ItemGroup>
   <ItemGroup />
