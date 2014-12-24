@@ -70,6 +70,12 @@
     <Compile Include="PackageFilieres\FormUpdateFiliere.Designer.cs">
       <DependentUpon>FormUpdateFiliere.cs</DependentUpon>
     </Compile>
+    <Compile Include="PackageGroupes\FormGroupe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageGroupes\FormGroupe.Designer.cs">
+      <DependentUpon>FormGroupe.cs</DependentUpon>
+    </Compile>
     <Compile Include="PackageStagiaires\FormGestionInscription.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PackageFilieres\FormUpdateFiliere.resx">
       <DependentUpon>FormUpdateFiliere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageGroupes\FormGroupe.resx">
+      <DependentUpon>FormGroupe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PackageStagiaires\FormGestionInscription.resx">
       <DependentUpon>FormGestionInscription.cs</DependentUpon>

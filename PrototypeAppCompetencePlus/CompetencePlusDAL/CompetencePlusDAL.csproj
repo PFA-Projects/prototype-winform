@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="PackageGroupes\Groupe.cs" />
     <Compile Include="PackageGroupes\GroupeDAO.cs" />
+    <Compile Include="Tools\BusinessException.cs" />
     <Compile Include="Tools\IGestion.cs" />
     <Compile Include="Tools\MyConnection.cs" />
     <Compile Include="PackageFilieres\FiliereDAO.cs" />

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using CompetencePlus.Tools;
 
 namespace CompetencePlus.PackageFilieres
 {
@@ -22,12 +23,19 @@ namespace CompetencePlus.PackageFilieres
 
         private void BtSave_Click(object sender, EventArgs e)
         {
-            Filiere filiere = new Filiere();
-            filiere.Code = CodeTextBox.Text;
-            filiere.Titre = TitreTextBox.Text;
-            filiere.Description = DescriptionTextBox.Text;
-            new FiliereBAO().Add(filiere);
-            this.Dispose();
+            try
+            {
+                Filiere filiere = new Filiere();
+                filiere.Code = CodeTextBox.Text;
+                filiere.Titre = TitreTextBox.Text;
+                filiere.Description = DescriptionTextBox.Text;
+                new FiliereBAO().Add(filiere);
+                this.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Ereur de saisie");
+            }
         }
 
         private void BtCancel_Click(object sender, EventArgs e)
